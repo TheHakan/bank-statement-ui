@@ -11,25 +11,25 @@ export function Header() {
           StatementFlow
         </span>
       </Link>
-      <nav className="flex items-center gap-6 text-sm text-slate-300">
-        <Link href="#features" className="hover:text-sky-400 transition">
+      <nav className="flex items-center gap-3 text-sm text-slate-300 sm:gap-4 md:gap-6">
+        <Link href="#features" className="hidden hover:text-sky-400 transition md:block">
           Features
         </Link>
-        <Link href="#pricing" className="hover:text-sky-400 transition">
+        <Link href="#pricing" className="hidden hover:text-sky-400 transition sm:block">
           Pricing
         </Link>
-        <Link href="#how-it-works" className="hover:text-sky-400 transition">
+        <Link href="#how-it-works" className="hidden hover:text-sky-400 transition lg:block">
           How it works
         </Link>
         <Link
           href="/#login"
-          className="rounded-lg px-3 py-1.5 text-sm text-slate-200 hover:text-sky-300"
+          className="hidden rounded-lg px-3 py-1.5 text-sm text-slate-200 hover:text-sky-300 sm:block"
         >
           Log in
         </Link>
         <Link
           href="/dashboard"
-          className="rounded-lg bg-sky-500 px-3.5 py-1.5 text-sm font-medium text-slate-950 shadow-md shadow-sky-500/30 hover:bg-sky-400"
+          className="rounded-lg bg-sky-500 px-3 py-1.5 text-xs font-medium text-slate-950 shadow-md shadow-sky-500/30 hover:bg-sky-400 sm:px-3.5 sm:text-sm"
         >
           Demo
         </Link>
