@@ -29,13 +29,13 @@ export default function HomePage() {
               How it works
             </Link>
             <Link
-              href="/login"
+              href="/#login"
               className="rounded-lg px-3 py-1.5 text-sm text-slate-200 hover:text-sky-300"
             >
               Log in
             </Link>
             <Link
-              href="/register"
+              href="/#register"
               className="rounded-lg bg-sky-500 px-3.5 py-1.5 text-sm font-medium text-slate-950 shadow-md shadow-sky-500/30 hover:bg-sky-400"
             >
               Get started
@@ -72,9 +72,12 @@ export default function HomePage() {
               >
                 Start free trial
               </Link>
-              <button className="text-sm text-slate-300 hover:text-sky-300">
+              <Link
+                href="/dashboard"
+                className="text-sm text-slate-300 hover:text-sky-300"
+              >
                 View dashboard demo →
-              </button>
+              </Link>
             </div>
 
             <p className="text-xs text-slate-500">
@@ -568,13 +571,13 @@ export default function HomePage() {
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
             <Link
-              href="/register"
+              href="/#register"
               className="rounded-xl bg-sky-500 px-6 py-3 text-sm font-medium text-slate-950 shadow-lg shadow-sky-500/30 hover:bg-sky-400"
             >
               Start free trial
             </Link>
             <Link
-              href="/pricing"
+              href="/#pricing"
               className="rounded-xl border border-slate-700 bg-slate-900/50 px-6 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800"
             >
               View pricing
