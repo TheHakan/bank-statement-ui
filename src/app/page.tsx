@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-950">
+    <main className="min-h-screen" style={{ background: 'var(--background)', color: 'var(--foreground)' }}>
       {/* top gradient */}
       <div className="pointer-events-none fixed inset-0 -z-10 bg-linear-to-b from-slate-50 via-white to-slate-100 dark:from-slate-900 dark:via-slate-950 dark:to-black" />
       <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.15),transparent_60%)] dark:bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.25),transparent_60%)]" />
