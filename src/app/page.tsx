@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Header } from "@/components/layout/header";
 
 export default function HomePage() {
   return (
@@ -9,39 +10,7 @@ export default function HomePage() {
 
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pt-6 pb-16 sm:px-6 lg:px-8">
         {/* NAVBAR */}
-        <header className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-sky-500/20 text-xs font-bold text-sky-300">
-              SF
-            </div>
-            <span className="text-sm font-semibold tracking-wide text-slate-100">
-              StatementFlow
-            </span>
-          </Link>
-          <nav className="flex items-center gap-6 text-sm text-slate-300">
-            <Link href="#features" className="hover:text-sky-400 transition">
-              Features
-            </Link>
-            <Link href="#pricing" className="hover:text-sky-400 transition">
-              Pricing
-            </Link>
-            <Link href="#how-it-works" className="hover:text-sky-400 transition">
-              How it works
-            </Link>
-            <Link
-              href="/#login"
-              className="rounded-lg px-3 py-1.5 text-sm text-slate-200 hover:text-sky-300"
-            >
-              Log in
-            </Link>
-            <Link
-              href="/#register"
-              className="rounded-lg bg-sky-500 px-3.5 py-1.5 text-sm font-medium text-slate-950 shadow-md shadow-sky-500/30 hover:bg-sky-400"
-            >
-              Get started
-            </Link>
-          </nav>
-        </header>
+        <Header />
 
         {/* HERO */}
         <section className="mt-16 flex flex-1 flex-col items-start justify-center gap-10 md:flex-row md:items-center">
