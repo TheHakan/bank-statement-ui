@@ -22,26 +22,26 @@ export default function TransactionsTable({ limit }: TransactionsTableProps) {
     <div className="overflow-x-auto">
       <table className="w-full text-left text-sm">
         <thead>
-          <tr className="border-b border-slate-800 text-xs text-slate-400">
+          <tr className="border-b border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
             <th className="pb-3 font-medium">Date</th>
             <th className="pb-3 font-medium">Description</th>
             <th className="pb-3 font-medium">Category</th>
             <th className="pb-3 font-medium text-right">Amount</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-slate-800">
+        <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
           {displayedTransactions.map((transaction) => (
-            <tr key={transaction.id} className="group hover:bg-slate-800/30">
-              <td className="py-3 text-slate-400">{transaction.date}</td>
-              <td className="py-3 text-slate-200">{transaction.description}</td>
+            <tr key={transaction.id} className="group hover:bg-slate-100 dark:hover:bg-slate-800/30">
+              <td className="py-3 text-slate-600 dark:text-slate-400">{transaction.date}</td>
+              <td className="py-3 text-slate-900 dark:text-slate-200">{transaction.description}</td>
               <td className="py-3">
-                <span className="inline-flex items-center rounded-full bg-slate-800 px-2 py-0.5 text-xs text-slate-300">
+                <span className="inline-flex items-center rounded-full bg-slate-200 dark:bg-slate-800 px-2 py-0.5 text-xs text-slate-700 dark:text-slate-300">
                   {transaction.category}
                 </span>
               </td>
               <td
                 className={`py-3 text-right font-medium ${
-                  transaction.type === "credit" ? "text-emerald-400" : "text-slate-200"
+                  transaction.type === "credit" ? "text-emerald-600 dark:text-emerald-400" : "text-slate-900 dark:text-slate-200"
                 }`}
               >
                 {transaction.type === "credit" ? "+" : ""}
