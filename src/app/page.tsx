@@ -6,8 +6,8 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-slate-950">
       {/* top gradient */}
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-slate-900 via-slate-950 to-black" />
-      <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_60%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-linear-to-b from-slate-900 via-slate-950 to-black" />
+      <div className="pointer-events-none fixed inset-x-0 top-0 -z-10 h-64 bg-[radial-gradient(circle_at_top,rgba(56,189,248,0.25),transparent_60%)]" />
 
       <div className="mx-auto flex min-h-screen max-w-6xl flex-col px-4 pt-6 pb-16 sm:px-6 lg:px-8">
         {/* NAVBAR */}
@@ -22,7 +22,7 @@ export default function HomePage() {
 
             <h1 className="text-2xl font-semibold leading-tight text-slate-100 sm:text-3xl md:text-4xl lg:text-5xl">
               Convert{" "}
-              <span className="bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">
                 bank statements
               </span>{" "}
               from PDF to Excel instantly
