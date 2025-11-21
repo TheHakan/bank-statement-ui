@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export default function HomePage() {
   return (
@@ -13,13 +14,13 @@ export default function HomePage() {
         <Header />
 
         {/* HERO */}
-        <section className="mt-16 flex flex-1 flex-col items-start justify-center gap-10 md:flex-row md:items-center">
-          <div className="flex-1 space-y-6">
+        <section className="mt-8 flex flex-1 flex-col items-start justify-center gap-6 md:mt-16 md:gap-10 lg:flex-row lg:items-center">
+          <div className="flex-1 space-y-4 md:space-y-6">
             <p className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-sky-300">
               SaaS for bank statements
             </p>
 
-            <h1 className="text-3xl font-semibold leading-tight sm:text-4xl md:text-5xl">
+            <h1 className="text-2xl font-semibold leading-tight text-slate-100 sm:text-3xl md:text-4xl lg:text-5xl">
               Convert{" "}
               <span className="bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent">
                 bank statements
@@ -34,10 +35,10 @@ export default function HomePage() {
               reports in seconds. Perfect for accountants, bookkeepers, and finance teams.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <Link
                 href="/register"
-                className="rounded-xl bg-sky-500 px-5 py-2.5 text-sm font-medium text-slate-950 shadow-lg shadow-sky-500/30 hover:bg-sky-400"
+                className="w-full rounded-xl bg-sky-500 px-5 py-2.5 text-center text-sm font-medium text-slate-950 shadow-lg shadow-sky-500/30 hover:bg-sky-400 sm:w-auto"
               >
                 Start free trial
               </Link>
@@ -49,13 +50,13 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <p className="text-xs text-slate-500">
+            <p className="text-xs leading-relaxed text-slate-500">
               Free trial available · Convert PDF statements to Excel · Secure cloud processing · Built for accounting professionals
             </p>
           </div>
 
           {/* Right preview */}
-          <div className="mt-10 flex-1 md:mt-0">
+          <div className="mt-8 w-full flex-1 md:mt-10 lg:mt-0">
             <div className="relative rounded-3xl border border-slate-800 bg-slate-900/70 p-4 shadow-2xl backdrop-blur">
               <div className="mb-3 flex items-center justify-between text-xs text-slate-400">
                 <span>Dashboard preview</span>
@@ -114,9 +115,9 @@ export default function HomePage() {
         </section>
 
         {/* Features section - SEO optimized */}
-        <section id="features" className="mt-20 space-y-8">
+        <section id="features" className="mt-12 space-y-6 md:mt-20 md:space-y-8">
           <div>
-            <h2 className="text-2xl font-semibold text-slate-100">
+            <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
               Powerful Bank Statement Processing Features
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-slate-400 max-w-3xl">
@@ -126,7 +127,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
             <div className="rounded-xl border border-slate-800 bg-slate-900/50 p-5">
               <h3 className="font-medium text-slate-100">Automatic Data Extraction</h3>
               <p className="mt-2 text-xs text-slate-400 leading-relaxed">
@@ -152,15 +153,15 @@ export default function HomePage() {
         </section>
 
         {/* How it Works - SEO content */}
-        <section id="how-it-works" className="mt-16 border-t border-slate-800 pt-12">
-          <h2 className="text-2xl font-semibold text-slate-100">
+        <section id="how-it-works" className="mt-12 border-t border-slate-800 pt-8 md:mt-16 md:pt-12">
+          <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
             How to Convert Bank Statements to Excel
           </h2>
           <p className="mt-3 text-sm text-slate-400 max-w-2xl">
             Transform your PDF bank statements into organized spreadsheets in three simple steps.
           </p>
           
-          <div className="mt-8 space-y-6">
+          <div className="mt-6 space-y-4 md:mt-8 md:space-y-6">
             <div className="flex gap-4">
               <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-sky-500/20 text-sm font-semibold text-sky-300">
                 1
@@ -201,11 +202,11 @@ export default function HomePage() {
         </section>
 
         {/* Benefits section */}
-        <section className="mt-16">
-          <h2 className="text-2xl font-semibold text-slate-100">
+        <section className="mt-12 md:mt-16">
+          <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
             Why Choose StatementFlow for Bank Statement Conversion?
           </h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 md:mt-6 md:gap-4">
             <div className="flex gap-3">
               <div className="text-emerald-400">✓</div>
               <div>
@@ -238,8 +239,8 @@ export default function HomePage() {
         </section>
 
         {/* Pricing section */}
-        <section id="pricing" className="mt-16">
-          <h2 className="text-2xl font-semibold text-slate-100">
+        <section id="pricing" className="mt-12 md:mt-16">
+          <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
             Affordable Pricing for Bank Statement Conversion
           </h2>
           <p className="mt-2 text-sm text-slate-400">
@@ -247,7 +248,7 @@ export default function HomePage() {
             and upgrade as you grow.
           </p>
           
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 md:mt-8 md:gap-6 lg:grid-cols-3">
             {/* Starter Plan */}
             <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
               <h3 className="text-lg font-semibold text-slate-100">Starter</h3>
@@ -356,15 +357,15 @@ export default function HomePage() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="mt-16">
-          <h2 className="text-2xl font-semibold text-slate-100">
+        <section className="mt-12 md:mt-16">
+          <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
             Who Uses Bank Statement Converters?
           </h2>
           <p className="mt-3 text-sm text-slate-400 max-w-3xl">
             StatementFlow helps professionals across industries streamline their financial data processing.
           </p>
           
-          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 md:mt-8 md:gap-6">
             <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-5">
               <h3 className="font-semibold text-slate-100">Accountants & Bookkeepers</h3>
               <p className="mt-2 text-xs text-slate-400 leading-relaxed">
@@ -397,11 +398,11 @@ export default function HomePage() {
         </section>
 
         {/* FAQ Section */}
-        <section className="mt-16">
-          <h2 className="text-2xl font-semibold text-slate-100">
+        <section className="mt-12 md:mt-16">
+          <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
             Frequently Asked Questions About Bank Statement Conversion
           </h2>
-          <div className="mt-8 space-y-4">
+          <div className="mt-6 space-y-3 md:mt-8 md:space-y-4">
             <details className="group rounded-xl border border-slate-800 bg-slate-900/30 p-5">
               <summary className="cursor-pointer font-medium text-slate-100 text-sm list-none flex items-center justify-between">
                 How accurate is the bank statement converter?
@@ -465,11 +466,11 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="mt-16">
-          <h2 className="text-2xl font-semibold text-slate-100">
+        <section className="mt-12 md:mt-16">
+          <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
             Trusted by Finance Professionals
           </h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-4 sm:grid-cols-2 md:mt-8 md:gap-6 lg:grid-cols-3">
             <div className="rounded-xl border border-slate-800 bg-slate-900/30 p-5">
               <div className="flex items-center gap-1 text-yellow-400 text-sm">
                 ★★★★★
@@ -530,24 +531,24 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="mt-16 rounded-2xl border border-sky-500/30 bg-linear-to-br from-sky-500/10 to-cyan-500/10 p-8 text-center">
-          <h2 className="text-2xl font-semibold text-slate-100">
+        <section className="mt-12 rounded-2xl border border-sky-500/30 bg-linear-to-br from-sky-500/10 to-cyan-500/10 p-6 text-center md:mt-16 md:p-8">
+          <h2 className="text-xl font-semibold text-slate-100 md:text-2xl">
             Ready to Transform Your Bank Statement Processing?
           </h2>
           <p className="mt-3 text-sm text-slate-300 max-w-2xl mx-auto">
             Join thousands of accountants, bookkeepers, and finance professionals who save hours 
             every week with StatementFlow. Start your free trial today—no credit card required.
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
             <Link
               href="/#register"
-              className="rounded-xl bg-sky-500 px-6 py-3 text-sm font-medium text-slate-950 shadow-lg shadow-sky-500/30 hover:bg-sky-400"
+              className="w-full rounded-xl bg-sky-500 px-6 py-3 text-sm font-medium text-slate-950 shadow-lg shadow-sky-500/30 hover:bg-sky-400 sm:w-auto"
             >
               Start free trial
             </Link>
             <Link
               href="/#pricing"
-              className="rounded-xl border border-slate-700 bg-slate-900/50 px-6 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800"
+              className="w-full rounded-xl border border-slate-700 bg-slate-900/50 px-6 py-3 text-sm font-medium text-slate-100 hover:bg-slate-800 sm:w-auto"
             >
               View pricing
             </Link>
@@ -555,63 +556,7 @@ export default function HomePage() {
         </section>
 
         {/* Footer */}
-        <footer className="mt-16 border-t border-slate-800 pt-12 pb-8">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-              <div className="flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-sky-500/20 text-xs font-bold text-sky-300">
-                  SF
-                </div>
-                <span className="text-sm font-semibold text-slate-100">StatementFlow</span>
-              </div>
-              <p className="mt-3 text-xs text-slate-400 leading-relaxed">
-                Professional bank statement converter for accountants and finance teams. 
-                Convert PDF to Excel instantly.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-semibold text-slate-100">Product</h4>
-              <ul className="mt-3 space-y-2 text-xs text-slate-400">
-                <li><Link href="#features" className="hover:text-sky-400">Features</Link></li>
-                <li><Link href="#pricing" className="hover:text-sky-400">Pricing</Link></li>
-                <li><Link href="#how-it-works" className="hover:text-sky-400">How it works</Link></li>
-                <li><Link href="/dashboard" className="hover:text-sky-400">Dashboard demo</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-semibold text-slate-100">Resources</h4>
-              <ul className="mt-3 space-y-2 text-xs text-slate-400">
-                <li><Link href="/blog" className="hover:text-sky-400">Blog</Link></li>
-                <li><Link href="/help" className="hover:text-sky-400">Help center</Link></li>
-                <li><Link href="/api" className="hover:text-sky-400">API docs</Link></li>
-                <li><Link href="/security" className="hover:text-sky-400">Security</Link></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-sm font-semibold text-slate-100">Company</h4>
-              <ul className="mt-3 space-y-2 text-xs text-slate-400">
-                <li><Link href="/about" className="hover:text-sky-400">About us</Link></li>
-                <li><Link href="/contact" className="hover:text-sky-400">Contact</Link></li>
-                <li><Link href="/privacy" className="hover:text-sky-400">Privacy policy</Link></li>
-                <li><Link href="/terms" className="hover:text-sky-400">Terms of service</Link></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-slate-500">
-              © 2025 StatementFlow. All rights reserved.
-            </p>
-            <div className="flex items-center gap-4 text-xs text-slate-500">
-              <Link href="/sitemap" className="hover:text-sky-400">Sitemap</Link>
-              <span>•</span>
-              <Link href="/accessibility" className="hover:text-sky-400">Accessibility</Link>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </div>
 
       {/* Structured Data for SEO */}
