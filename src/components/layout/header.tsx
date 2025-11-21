@@ -28,10 +28,10 @@ export function Header() {
           Log in
         </Link>
         <Link
-          href="/#register"
+          href="/dashboard"
           className="rounded-lg bg-sky-500 px-3.5 py-1.5 text-sm font-medium text-slate-950 shadow-md shadow-sky-500/30 hover:bg-sky-400"
         >
-          Get started
+          Demo
         </Link>
       </nav>
     </header>
