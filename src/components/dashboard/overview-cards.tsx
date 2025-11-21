@@ -39,19 +39,19 @@ export default function OverviewCards() {
         return (
           <div
             key={card.title}
-            className="rounded-2xl border border-slate-800 bg-slate-900/50 p-5"
+            className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 p-5"
           >
             <div className="flex items-center justify-between">
-              <p className="text-xs text-slate-400">{card.title}</p>
-              <Icon className="h-5 w-5 text-slate-400" />
+              <p className="text-xs text-slate-600 dark:text-slate-400">{card.title}</p>
+              <Icon className="h-5 w-5 text-slate-500 dark:text-slate-400" />
             </div>
           <div className="mt-3">
-            <p className="text-2xl font-semibold text-slate-100">{card.value}</p>
+            <p className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{card.value}</p>
             <p
               className={`mt-1 text-xs ${
                 card.changeType === "positive"
-                  ? "text-emerald-400"
-                  : "text-slate-400"
+                  ? "text-emerald-600 dark:text-emerald-400"
+                  : "text-slate-600 dark:text-slate-400"
               }`}
             >
               {card.change} from last month
