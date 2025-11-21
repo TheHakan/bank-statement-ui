@@ -13,23 +13,23 @@ export default function StatementsPage() {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-semibold text-slate-100">
+          <h1 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
             Bank Statements
           </h1>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
             Manage your uploaded bank statements and conversions.
           </p>
         </div>
-        <button className="rounded-lg bg-sky-500 px-4 py-2 text-sm font-medium text-slate-950 hover:bg-sky-400">
+        <button className="rounded-lg bg-sky-500 px-4 py-2 text-sm font-medium text-white hover:bg-sky-400">
           Upload New Statement
         </button>
       </div>
 
-      <section className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+      <section className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 p-6">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-slate-800 text-xs text-slate-400">
+              <tr className="border-b border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400">
                 <th className="pb-3 font-medium">File Name</th>
                 <th className="pb-3 font-medium">Upload Date</th>
                 <th className="pb-3 font-medium">Size</th>
@@ -37,29 +37,29 @@ export default function StatementsPage() {
                 <th className="pb-3 font-medium">Actions</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-800">
+            <tbody className="divide-y divide-slate-200 dark:divide-slate-800">
               {statements.map((statement) => (
-                <tr key={statement.id} className="hover:bg-slate-800/30">
+                <tr key={statement.id} className="hover:bg-slate-100 dark:hover:bg-slate-800/30">
                   <td className="py-4">
                     <div className="flex items-center gap-2">
-                      <FileText className="h-4 w-4 text-slate-400" />
-                      <span className="text-slate-200">{statement.name}</span>
+                      <FileText className="h-4 w-4 text-slate-500 dark:text-slate-400" />
+                      <span className="text-slate-900 dark:text-slate-200">{statement.name}</span>
                     </div>
                   </td>
-                  <td className="py-4 text-slate-400">{statement.date}</td>
-                  <td className="py-4 text-slate-400">{statement.size}</td>
+                  <td className="py-4 text-slate-600 dark:text-slate-400">{statement.date}</td>
+                  <td className="py-4 text-slate-600 dark:text-slate-400">{statement.size}</td>
                   <td className="py-4">
-                    <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-1 text-xs text-emerald-400">
+                    <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2 py-1 text-xs text-emerald-600 dark:text-emerald-400">
                       {statement.status}
                     </span>
                   </td>
                   <td className="py-4">
                     <div className="flex items-center gap-3">
-                      <button className="flex items-center gap-1 text-xs text-sky-400 hover:text-sky-300">
+                      <button className="flex items-center gap-1 text-xs text-sky-600 dark:text-sky-400 hover:text-sky-500 dark:hover:text-sky-300">
                         <Download className="h-3 w-3" />
                         Download
                       </button>
-                      <button className="flex items-center gap-1 text-xs text-slate-400 hover:text-rose-400">
+                      <button className="flex items-center gap-1 text-xs text-slate-600 dark:text-slate-400 hover:text-rose-600 dark:hover:text-rose-400">
                         <Trash2 className="h-3 w-3" />
                         Delete
                       </button>
