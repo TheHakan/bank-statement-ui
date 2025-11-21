@@ -1,7 +1,8 @@
 import OverviewCards from "@/components/dashboard/overview-cards";
 import TransactionsTable from "@/components/dashboard/transactions-table";
 import RecentActivity from "@/components/dashboard/recent-activity";
-import { Upload, FileBarChart, Search } from "lucide-react";
+import { Upload, FileBarChart, Search, Sparkles } from "lucide-react";
+import Link from "next/link";
 
 export default function DashboardPage() {
   return (
@@ -105,6 +106,38 @@ export default function DashboardPage() {
           </div>
         </section>
       </div>
+
+      {/* CTA Section */}
+      <section className="rounded-2xl border border-sky-500/30 bg-linear-to-br from-sky-500/10 to-cyan-500/10 p-8">
+        <div className="flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
+          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-sky-500/20">
+            <Sparkles className="h-8 w-8 text-sky-300" />
+          </div>
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold text-slate-100">
+              Upgrade to Professional Plan
+            </h3>
+            <p className="mt-2 text-sm text-slate-300">
+              Unlock unlimited conversions, advanced analytics, batch processing, and priority support. 
+              Save hours every week with premium features.
+            </p>
+          </div>
+          <div className="flex shrink-0 flex-col gap-2 sm:flex-row">
+            <Link
+              href="/#pricing"
+              className="rounded-lg bg-sky-500 px-5 py-2.5 text-sm font-medium text-slate-950 shadow-lg shadow-sky-500/30 hover:bg-sky-400"
+            >
+              View Plans
+            </Link>
+            <Link
+              href="/#features"
+              className="rounded-lg border border-slate-700 bg-slate-900/50 px-5 py-2.5 text-sm font-medium text-slate-100 hover:bg-slate-800"
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
