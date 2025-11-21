@@ -1,0 +1,110 @@
+import OverviewCards from "@/components/dashboard/overview-cards";
+import TransactionsTable from "@/components/dashboard/transactions-table";
+import RecentActivity from "@/components/dashboard/recent-activity";
+import { Upload, FileBarChart, Search } from "lucide-react";
+
+export default function DashboardPage() {
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold text-slate-100">
+            Overview
+          </h1>
+          <p className="mt-1 text-sm text-slate-400">
+            Welcome back! Here&apos;s your financial summary for November 2025.
+          </p>
+        </div>
+        <div className="flex items-center gap-2">
+          <select className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs text-slate-300 outline-none focus:border-sky-500">
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+            <option>This year</option>
+            <option>All time</option>
+          </select>
+        </div>
+      </div>
+
+      <OverviewCards />
+
+      <div className="grid gap-6 lg:grid-cols-3">
+        <div className="lg:col-span-2">
+          <section className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-lg font-semibold text-slate-100">
+                Recent Transactions
+              </h2>
+              <button className="text-xs text-sky-400 hover:text-sky-300">
+                View all →
+              </button>
+            </div>
+            <TransactionsTable limit={5} />
+          </section>
+        </div>
+
+        <div>
+          <RecentActivity />
+        </div>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2">
+        <section className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <h2 className="text-lg font-semibold text-slate-100">
+            Spending by Category
+          </h2>
+          <div className="mt-4 space-y-3">
+            {[
+              { name: "Groceries", amount: "$1,240", percentage: 35, color: "bg-emerald-500" },
+              { name: "Utilities", amount: "$820", percentage: 23, color: "bg-sky-500" },
+              { name: "Entertainment", amount: "$640", percentage: 18, color: "bg-purple-500" },
+              { name: "Transportation", amount: "$480", percentage: 14, color: "bg-orange-500" },
+              { name: "Other", amount: "$360", percentage: 10, color: "bg-slate-500" },
+            ].map((category) => (
+              <div key={category.name}>
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-slate-300">{category.name}</span>
+                  <span className="font-medium text-slate-100">{category.amount}</span>
+                </div>
+                <div className="mt-1.5 h-2 overflow-hidden rounded-full bg-slate-800">
+                  <div
+                    className={`h-full ${category.color}`}
+                    style={{ width: `${category.percentage}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
+          <h2 className="text-lg font-semibold text-slate-100">
+            Quick Actions
+          </h2>
+          <div className="mt-4 space-y-3">
+            <button className="flex w-full items-center gap-3 rounded-lg border border-slate-800 bg-slate-950/50 p-3 text-left text-sm text-slate-300 hover:bg-slate-800/50">
+              <Upload className="h-5 w-5 text-slate-400" />
+              <div>
+                <p className="font-medium text-slate-100">Upload Statement</p>
+                <p className="text-xs text-slate-500">Convert PDF to Excel</p>
+              </div>
+            </button>
+            <button className="flex w-full items-center gap-3 rounded-lg border border-slate-800 bg-slate-950/50 p-3 text-left text-sm text-slate-300 hover:bg-slate-800/50">
+              <FileBarChart className="h-5 w-5 text-slate-400" />
+              <div>
+                <p className="font-medium text-slate-100">Generate Report</p>
+                <p className="text-xs text-slate-500">Export analytics</p>
+              </div>
+            </button>
+            <button className="flex w-full items-center gap-3 rounded-lg border border-slate-800 bg-slate-950/50 p-3 text-left text-sm text-slate-300 hover:bg-slate-800/50">
+              <Search className="h-5 w-5 text-slate-400" />
+              <div>
+                <p className="font-medium text-slate-100">Search Transactions</p>
+                <p className="text-xs text-slate-500">Find specific entries</p>
+              </div>
+            </button>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+}
