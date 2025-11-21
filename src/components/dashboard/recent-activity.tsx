@@ -37,8 +37,8 @@ export default function RecentActivity() {
   ];
 
   return (
-    <section className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6">
-      <h2 className="text-lg font-semibold text-slate-100">Recent Activity</h2>
+    <section className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 p-6">
+      <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">Recent Activity</h2>
       <div className="mt-4 space-y-4">
         {activities.map((activity) => {
           const Icon = activity.icon;
@@ -50,11 +50,11 @@ export default function RecentActivity() {
                 <Icon className="h-4 w-4" />
               </div>
             <div className="flex-1">
-              <p className="text-sm font-medium text-slate-200">
+              <p className="text-sm font-medium text-slate-900 dark:text-slate-200">
                 {activity.action}
               </p>
-              <p className="text-xs text-slate-400">{activity.detail}</p>
-              <p className="mt-0.5 text-[10px] text-slate-500">{activity.time}</p>
+              <p className="text-xs text-slate-600 dark:text-slate-400">{activity.detail}</p>
+              <p className="mt-0.5 text-[10px] text-slate-500 dark:text-slate-500">{activity.time}</p>
             </div>
           </div>
           );
